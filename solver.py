@@ -47,7 +47,7 @@ def downLeft(x, y, wordSoFar):
             possibleWords.append(wordSoFar + wordSearch[x+1][y-1])
         downLeft(x+1, y-1, wordSoFar + wordSearch[x+1][y-1])
 
-# recursively increase word size to the left and up to check for words 
+# recursively increase word size to the right and down to check for words 
 def downRight(x, y, wordSoFar):
     if (x+1 < len(wordSearch) and y+1 < len(wordSearch[0])):
         if (d.check(wordSoFar + wordSearch[x+1][y+1]) and len(wordSoFar + wordSearch[x+1][y+1]) >= minsize):
